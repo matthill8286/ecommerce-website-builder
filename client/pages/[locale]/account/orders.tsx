@@ -1,54 +1,54 @@
-import { useAuthState } from "@saleor/sdk";
+// import { useAuthState } from "@saleor/sdk";
 import React, { ReactElement } from "react";
 
-import { AccountLayout, OrdersTable, Pagination, Spinner } from "@/components";
-import { useOrdersQuery } from "@/saleor/api";
+// import { AccountLayout, OrdersTable, Pagination, Spinner } from "@/components";
+// import { useOrdersQuery } from "@/saleor/api";
 
 const OrdersPage = () => {
-  const { authenticated } = useAuthState();
-  const {
-    data: ordersCollection,
-    loading,
-    error,
-    fetchMore,
-  } = useOrdersQuery({
-    skip: !authenticated,
-  });
+  //   const { authenticated } = useAuthState();
+  //   const {
+  //     data: ordersCollection,
+  //     loading,
+  //     error,
+  //     fetchMore,
+  //   } = useOrdersQuery({
+  //     skip: !authenticated,
+  //   });
 
-  if (loading) {
-    return <Spinner />;
-  }
+  //   if (loading) {
+  //     return <Spinner />;
+  //   }
 
-  if (error) return <p>Error {error.message}</p>;
+  //   if (error) return <p>Error {error.message}</p>;
 
-  const orders =
-    ordersCollection?.me?.orders?.edges.map((order) => {
-      return order.node;
-    }) || [];
+  //   const orders =
+  //     ordersCollection?.me?.orders?.edges.map((order) => {
+  //       return order.node;
+  //     }) || [];
 
-  const onLoadMore = () => {
-    fetchMore({
-      variables: {
-        after: ordersCollection?.me?.orders?.pageInfo.endCursor,
-      },
-    });
-  };
+  //   const onLoadMore = () => {
+  //     fetchMore({
+  //       variables: {
+  //         after: ordersCollection?.me?.orders?.pageInfo.endCursor,
+  //       },
+  //     });
+  //   };
 
-  return (
-    <>
-      <OrdersTable orders={orders} />
-      <Pagination
-        onLoadMore={onLoadMore}
-        pageInfo={ordersCollection?.me?.orders?.pageInfo}
-        itemsCount={ordersCollection?.me?.orders?.edges.length}
-        totalCount={ordersCollection?.me?.orders?.totalCount || undefined}
-      />
-    </>
-  );
+  //     <>
+  //       <OrdersTable orders={orders} />
+  //       <Pagination
+  //         onLoadMore={onLoadMore}
+  //         pageInfo={ordersCollection?.me?.orders?.pageInfo}
+  //         itemsCount={ordersCollection?.me?.orders?.edges.length}
+  //         totalCount={ordersCollection?.me?.orders?.totalCount || undefined}
+  //       />
+  //     </>
+
+  return <>Orders</>;
 };
 
 export default OrdersPage;
 
 OrdersPage.getLayout = function getLayout(page: ReactElement) {
-  return <AccountLayout>{page}</AccountLayout>;
+  return <>{page}</>;
 };

@@ -1,29 +1,29 @@
-import { useQueryState } from "next-usequerystate";
+// import { useQueryState } from "next-usequerystate";
 import React, { ReactElement } from "react";
-import { useIntl } from "react-intl";
-import { useDebounce } from "react-use";
+// import { useIntl } from "react-intl";
+// import { useDebounce } from "react-use";
 
-import { Layout, ProductCollection } from "@/components";
-import { messages } from "@/components/translations";
-import { ProductFilterInput } from "@/saleor/api";
+// import { Layout, ProductCollection } from "@/components";
+// import { messages } from "@/components/translations";
+// import { ProductFilterInput } from "@/saleor/api";
 
 const SearchPage = () => {
-  const t = useIntl();
-  const [searchQuery, setSearchQuery] = useQueryState("q");
-  const [debouncedFilter, setDebouncedFilter] =
-    React.useState<ProductFilterInput>({ search: searchQuery });
+  // const t = useIntl();
+  // const [searchQuery, setSearchQuery] = useQueryState("q");
+  // const [debouncedFilter, setDebouncedFilter] =
+  //   React.useState<ProductFilterInput>({ search: searchQuery });
 
-  const [] = useDebounce(
-    () => {
-      setDebouncedFilter({ search: searchQuery });
-    },
-    1000,
-    [searchQuery]
-  );
+  // const [] = useDebounce(
+  //   () => {
+  //     setDebouncedFilter({ search: searchQuery });
+  //   },
+  //   1000,
+  //   [searchQuery]
+  // );
 
   return (
     <main className="max-w-7xl mx-auto w-full px-8 mt-5">
-      <p className="font-semibold text-2xl mb-5">
+      {/* <p className="font-semibold text-2xl mb-5">
         {t.formatMessage(messages.searchHeader)}
       </p>
       <input
@@ -33,13 +33,14 @@ const SearchPage = () => {
         placeholder={t.formatMessage(messages.searchFieldPlaceholder)}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <ProductCollection filter={debouncedFilter} />
+      <ProductCollection filter={debouncedFilter} /> */}
+      Search Page
     </main>
   );
 };
 
 SearchPage.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <>{page}</>;
 };
 
 export default SearchPage;

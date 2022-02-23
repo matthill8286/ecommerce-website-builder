@@ -1,15 +1,15 @@
-import { useState } from "react"
-import { fetchAPI } from "utils/api"
-import * as yup from "yup"
-import { Formik, Form, Field } from "formik"
-import Button from "../elements/button"
+import { useState } from "react";
+import { fetchAPI } from "utils/api";
+// import * as yup from "yup"
+import { Formik, Form, Field } from "formik";
+import Button from "../elements/button";
 
 const LeadForm = ({ data }) => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  const LeadSchema = yup.object().shape({
-    email: yup.string().email().required(),
-  })
+  // const LeadSchema = yup.object().shape({
+  //   email: yup.string().email().required(),
+  // })
 
   return (
     <div className="py-10 text-center">
@@ -17,12 +17,12 @@ const LeadForm = ({ data }) => {
       <div className="flex flex-col items-center">
         <Formik
           initialValues={{ email: "" }}
-          validationSchema={LeadSchema}
+          // validationSchema={LeadSchema}
           onSubmit={async (values, { setSubmitting, setErrors }) => {
-            setLoading(true)
+            setLoading(true);
 
             try {
-              setErrors({ api: null })
+              setErrors({ api: null });
               await fetchAPI(
                 "/lead-form-submissions",
                 {},
@@ -33,13 +33,13 @@ const LeadForm = ({ data }) => {
                     location: data.location,
                   }),
                 }
-              )
+              );
             } catch (err) {
-              setErrors({ api: err.message })
+              setErrors({ api: err.message });
             }
 
-            setLoading(false)
-            setSubmitting(false)
+            setLoading(false);
+            setSubmitting(false);
           }}
         >
           {({ errors, touched, isSubmitting }) => (
@@ -66,7 +66,7 @@ const LeadForm = ({ data }) => {
         </Formik>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LeadForm
+export default LeadForm;
