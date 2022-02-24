@@ -1,7 +1,7 @@
 import qs from "qs";
 
 export function getStrapiURL(path) {
-  return `${process.env.NEXT_PUBLIC_API_URI || "http://localhost:1338"}${path}`;
+  return `${process.env.NEXT_PUBLIC_API_URI || "http://localhost:1337"}${path}`;
 }
 
 /**
