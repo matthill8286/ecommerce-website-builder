@@ -1,0 +1,16 @@
+query ProductCollection(
+  $before: String
+  $after: String
+  $filter: ProductFilterInput
+  $locale: LanguageCodeEnum!
+) {
+  products(
+    first: 4
+    locale: $locale
+    after: $after
+    before: $before
+    filter: $filter
+  ) {
+    ...ProductCard
+  }
+}

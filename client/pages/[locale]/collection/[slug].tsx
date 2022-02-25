@@ -19,6 +19,7 @@ import React, { ReactElement } from "react";
 // } from "@/saleor/api";
 
 const CollectionPage = ({ collection }: any) => {
+  console.log(">> logging", { collection });
   if (!collection) {
     return "<Custom404 />";
   }

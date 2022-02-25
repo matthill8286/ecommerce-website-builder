@@ -1,0 +1,11 @@
+fragment ImageFragment on Image {
+  data {
+    id
+    attributes {
+      url
+      alt
+      width
+      height
+    }
+  }
+}

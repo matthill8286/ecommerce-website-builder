@@ -16,10 +16,10 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/components": ["components"],
       "@/components/*": ["components/*"],
-      "@/graphql": ["graphql"],
+      "@/graphql/*": ["graphql"],
       "@/lib/*": ["lib/*"],
+      "@/models/*": ["models/*"],
       "@/utils/*": ["utils/*"]
     }
   },

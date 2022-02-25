@@ -28,6 +28,7 @@ const CheckoutPage = () => {
         <div className="md:w-2/3 w-full">{/* <CheckoutForm /> */}</div>
         <div className="md:w-1/3 w-full">
           {/* <CheckoutSidebar checkout={checkout} /> */}
+          Checkout
         </div>
       </main>
     </>

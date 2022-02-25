@@ -1,0 +1,11 @@
+fragment ProductMediaFragment on ProductMedia {
+  data {
+    id
+    attributes {
+      url
+      alt
+      width
+      height
+    }
+  }
+}

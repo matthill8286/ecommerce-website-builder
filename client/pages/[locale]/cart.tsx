@@ -73,7 +73,7 @@ import { ReactElement } from "react";
 //   );
 // };
 
-const Cart = () => {};
+const Cart = () => `Cart Page`;
 
 export default Cart;
 

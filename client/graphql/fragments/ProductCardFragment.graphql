@@ -1,0 +1,44 @@
+fragment ProductCard on ProductEntityResponseCollection {
+  data {
+    id
+    __typename
+    attributes {
+      __typename
+      name
+      slug
+      description
+      price
+      productimage {
+        __typename
+        data {
+          attributes {
+            url
+            height
+            width
+          }
+        }
+      }
+      featuredImages {
+        __typename
+        data {
+          attributes {
+            url
+            height
+            width
+          }
+        }
+      }
+      categories {
+        __typename
+        data {
+          id
+          attributes {
+            name
+            slug
+          }
+        }
+        __typename
+      }
+    }
+  }
+}

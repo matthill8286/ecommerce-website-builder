@@ -12,8 +12,8 @@ module.exports = withAtomicUI(
     reactStrictMode: true,
     swcMinify: true,
     i18n: {
-      locales: ["en", "fr"],
-      defaultLocale: "en",
+      locales: ["en-GB", "fr-FR"],
+      defaultLocale: "en-GB",
     },
     async redirects() {
       return [

@@ -17,17 +17,14 @@ import { ReactElement } from "react";
 // import { PageDocument, PageQuery, PageQueryVariables } from "@/saleor/api";
 
 const PagePage = ({ page }: any) => {
+  console.log(">> logging", { page });
   if (!page?.id) {
     return "<Custom404 />";
   }
 
   // const content = translate(page, "content");
 
-  return (
-    <main className="max-w-7xl mx-auto pt-8 px-8">
-      {page.id}
-    </main>
-  );
+  return <main className="max-w-7xl mx-auto pt-8 px-8">{page.id}</main>;
 };
 
 export default PagePage;

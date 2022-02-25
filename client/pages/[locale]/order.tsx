@@ -14,7 +14,7 @@ const OrderCompletedPage = () => {
       <div className="font-semibold text-3xl">Your order is completed!</div>
       <p className="mt-2">
         To check your orders,
-        <Link href={"/orders"}> click here.</Link>
+        <Link href={"/en-GB/account/orders"}> click here.</Link>
       </p>
     </main>
   );
