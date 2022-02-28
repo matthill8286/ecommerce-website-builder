@@ -1,0 +1,16 @@
+query LeadFormSubmissions(
+  $filters: LeadFormSubmissionFiltersInput
+  $pagination: PaginationArg = {}
+  $sort: [String] = []
+) {
+  leadFormSubmission {
+    data {
+      id
+      attributes {
+        email
+        status
+        location
+      }
+    }
+  }
+}

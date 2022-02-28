@@ -1,0 +1,12 @@
+query PagePaths {
+  pages {
+    data {
+      attributes {
+        slug
+      }
+    }
+    meta {
+      ...Pagination
+    }
+  }
+}

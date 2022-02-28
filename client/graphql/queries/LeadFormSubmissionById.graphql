@@ -1,0 +1,12 @@
+query LeadFormSubmissionById($id: ID) {
+  leadFormSubmission {
+    data {
+      id
+      attributes {
+        email
+        status
+        location
+      }
+    }
+  }
+}

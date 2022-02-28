@@ -5,6 +5,7 @@
 //   InferGetStaticPropsType,
 // } from "next";
 // import Custom404 from "pages/404";
+import Layout from "@/components/Layout";
 import React, { ReactElement } from "react";
 
 // import { Layout, PageHero, ProductCollection } from "@/components";
@@ -69,5 +70,5 @@ export default CollectionPage;
 // };
 
 CollectionPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

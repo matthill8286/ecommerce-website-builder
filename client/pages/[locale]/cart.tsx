@@ -7,6 +7,7 @@
 // import { messages } from "@/components/translations";
 // import { usePaths } from "@/lib/paths";
 // import { useCheckout } from "@/lib/providers/CheckoutProvider";
+import Layout from "@/components/Layout";
 import { ReactElement } from "react";
 
 // const Cart = () => {
@@ -78,5 +79,5 @@ const Cart = () => `Cart Page`;
 export default Cart;
 
 Cart.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

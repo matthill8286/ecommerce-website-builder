@@ -4,6 +4,7 @@
 //   GetStaticPropsContext,
 //   InferGetStaticPropsType,
 // } from "next";
+import Layout from "@/components/Layout";
 import React, { ReactElement } from "react";
 // import { useIntl } from "react-intl";
 
@@ -67,5 +68,5 @@ export default Home;
 // };
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

@@ -1,0 +1,106 @@
+query Global($locale: I18NLocaleCode) {
+  global {
+    data {
+      id
+      attributes {
+        favicon {
+          data {
+            attributes {
+              name
+              alternativeText
+              url
+            }
+          }
+        }
+        metaTitleSuffix
+        metadata {
+          id
+          metaTitle
+          metaDescription
+          twitterCardType
+          twitterUsername
+          shareImage {
+            data {
+              attributes {
+                name
+                alternativeText
+                url
+              }
+            }
+          }
+        }
+        notificationBanner {
+          id
+          text
+          type
+        }
+        navbar {
+          id
+          links {
+            id
+            url
+            newTab
+            text
+          }
+          button {
+            id
+            url
+            newTab
+            text
+            type
+          }
+          logo {
+            data {
+              attributes {
+                name
+                alternativeText
+                url
+              }
+            }
+          }
+        }
+        footer {
+          id
+          smallText
+          columns {
+            id
+            title
+            links {
+              id
+              url
+              newTab
+              text
+            }
+          }
+          logo {
+            data {
+              attributes {
+                name
+                alternativeText
+                url
+              }
+            }
+          }
+        }
+        locale
+        localizations {
+          data {
+            id
+            attributes {
+              favicon {
+                data {
+                  attributes {
+                    name
+                    alternativeText
+                    url
+                  }
+                }
+              }
+              locale
+            }
+          }
+        }
+      }
+    }
+  }
+}

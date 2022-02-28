@@ -7,6 +7,7 @@
 //   InferGetStaticPropsType,
 // } from "next";
 // import Link from "next/link";
+import Layout from "@/components/Layout";
 import { useRouter } from "next/router";
 // import Custom404 from "pages/404";
 import React, { ReactElement } from "react";
@@ -15,7 +16,7 @@ import React, { ReactElement } from "react";
 // import { Layout, RichText, VariantSelector } from "@/components";
 // import { AttributeDetails } from "@/components/product/AttributeDetails";
 // import { ProductGallery } from "@/components/product/ProductGallery";
-// import { useRegions } from "@/components/RegionsProvider";
+// import { useLocales } from "@/components/LocalesProvider";
 // import { ProductPageSeo } from "@/components/seo/ProductPageSeo";
 // import { messages } from "@/components/translations";
 // import apolloClient from "@/lib/graphql";
@@ -46,7 +47,7 @@ const ProductPage = ({ product }: any) => {
   const router = useRouter();
   // const paths = usePaths();
   // const t = useIntl();
-  // const { currentChannel, formatPrice } = useRegions();
+  // const { currentChannel, formatPrice } = useLocales();
 
   // const { checkoutToken, setCheckoutToken, checkout } = useCheckout();
 
@@ -182,5 +183,5 @@ export default ProductPage;
 // };
 
 ProductPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

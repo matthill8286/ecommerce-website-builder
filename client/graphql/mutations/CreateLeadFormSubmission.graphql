@@ -1,0 +1,12 @@
+mutation CreateLeadFormSubmission($data: LeadFormSubmissionInput!) {
+  createLeadFormSubmission(data: $data) {
+    data {
+      id
+      attributes {
+        email
+        status
+        location
+      }
+    }
+  }
+}

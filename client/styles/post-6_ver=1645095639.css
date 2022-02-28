@@ -1,0 +1,33 @@
+.organism-kit-6 {
+  --e-global-color-primary: #3078db;
+  --e-global-color-secondary: #54595f;
+  --e-global-color-text: #7a7a7a;
+  --e-global-color-accent: #61ce70;
+  --e-global-color-lprimary1: #da1c2e;
+  --e-global-color-lprimary2: #b81726;
+  --e-global-color-lprimary3: #fff3f4;
+  --e-global-color-lsecondary1: #ffc14a;
+  --e-global-color-lsecondary2: #f2af2f;
+  --e-global-color-lsupport1: #b15dff;
+  --e-global-color-lcardlabel: #ffa800;
+}
+.organism-section.organism-section-boxed > .organism-container {
+  max-width: 1200px;
+}
+.organism-widget:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+h1.entry-title {
+  display: var(--page-title-display);
+}
+@media (max-width: 1024px) {
+  .organism-section.organism-section-boxed > .organism-container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 767px) {
+  .organism-section.organism-section-boxed > .organism-container {
+    max-width: 767px;
+  }
+}

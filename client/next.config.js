@@ -9,23 +9,14 @@ const withAtomicUI = require("next-transpile-modules")([
 
 module.exports = withAtomicUI(
   withBundleAnalyzer({
-    reactStrictMode: true,
-    swcMinify: true,
-    i18n: {
-      locales: ["en-GB", "fr-FR"],
-      defaultLocale: "en-GB",
-    },
     async redirects() {
       return [
         {
           source: "/",
           destination: "/en-GB",
-          permanent: false,
+          permanent: true,
         },
       ];
-    },
-    experimental: {
-      reactRoot: true,
     },
   })
 );

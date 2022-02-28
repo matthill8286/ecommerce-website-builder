@@ -5,7 +5,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -15,12 +15,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    "experimentalDecorators": true,
     "paths": {
       "@/components/*": ["components/*"],
-      "@/graphql/*": ["graphql"],
+      "@/graphql/*": ["graphql/*"],
       "@/lib/*": ["lib/*"],
       "@/models/*": ["models/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/strapi/*": ["strapi/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,0 +1,30 @@
+overwrite: true
+schema:
+  - "./schema.graphql"
+documents: "graphql/**/*.{ts,graphql}"
+generates:
+  strapi/api.tsx:
+    plugins:
+      - add:
+          content:
+            - "// THIS FILE IS GENERATED WITH `npm run generate`"
+            - "import * as Scalar from '../scalars'"
+      - "typescript"
+      - "typescript-operations"
+
+    config:
+      scalars:
+        JSONString: string
+      dedupeOperationSuffix: true # Prevent suffix duplication in generated names
+      enumsAsTypes: true
+
+  strapi/hooks.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+      - "typescript-apollo-client-helpers"
+
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

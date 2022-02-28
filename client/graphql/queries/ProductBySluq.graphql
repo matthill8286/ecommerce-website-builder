@@ -1,8 +1,0 @@
-query ProductBySlug(
-  $slug: String!
-  $locale: LanguageCodeEnum!
-) {
-  product(slug: $slug, locale: $locale) {
-    ...ProductDetailsFragment
-  }
-}

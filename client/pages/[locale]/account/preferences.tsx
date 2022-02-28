@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import React, { ReactElement } from "react";
 
 // import { AccountLayout } from "@/components";
@@ -11,5 +12,5 @@ const AccountPreferencesPage = () => {
 export default AccountPreferencesPage;
 
 AccountPreferencesPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

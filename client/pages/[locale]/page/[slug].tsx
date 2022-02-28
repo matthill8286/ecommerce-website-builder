@@ -7,6 +7,7 @@
 // import Custom404 from "pages/404";
 // import { ReactElement } from "react";
 
+import Layout from "@/components/Layout";
 import { ReactElement } from "react";
 
 // import { Layout, RichText } from "@/components";
@@ -63,5 +64,5 @@ export interface pathParams {
 // };
 
 PagePage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

@@ -1,4 +1,5 @@
 // import { useAuthState } from "@saleor/sdk";
+import Layout from "@/components/Layout";
 import React, { ReactElement } from "react";
 
 // import { AccountLayout, OrdersTable, Pagination, Spinner } from "@/components";
@@ -50,5 +51,5 @@ const OrdersPage = () => {
 export default OrdersPage;
 
 OrdersPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

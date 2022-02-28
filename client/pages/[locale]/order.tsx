@@ -1,4 +1,5 @@
 // import { CheckIcon } from "@heroicons/react/outline";
+import Layout from "@/components/Layout";
 import Link from "next/link";
 import React, { ReactElement } from "react";
 
@@ -23,5 +24,5 @@ const OrderCompletedPage = () => {
 export default OrderCompletedPage;
 
 OrderCompletedPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

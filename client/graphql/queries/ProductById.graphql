@@ -1,0 +1,10 @@
+query ProductById($id: ID!) {
+  product {
+    data {
+      id
+      attributes {
+        name
+      }
+    }
+  }
+}

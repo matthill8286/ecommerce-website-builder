@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account/*
+
+# Host
+Host: https://frozen-brushlands-67141.herokuapp.com/
+
+# Sitemaps
+Sitemap: https://frozen-brushlands-67141.herokuapp.com/sitemap.xml

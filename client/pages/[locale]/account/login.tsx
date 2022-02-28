@@ -8,9 +8,9 @@
 // import { messages } from "@/components/translations";
 // import { usePaths } from "@/lib/paths";
 
-// export type OptionalQuery = {
-//   next?: string;
-// };
+export type OptionalQuery = {
+  next?: string;
+};
 
 // export interface LoginFormData {
 //   email: string;

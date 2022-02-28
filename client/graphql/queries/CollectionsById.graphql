@@ -1,0 +1,10 @@
+query CollectionsById($id: ID!) {
+  collection {
+    data {
+      id
+      attributes {
+        name
+      }
+    }
+  }
+}

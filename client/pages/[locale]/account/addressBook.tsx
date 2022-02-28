@@ -2,6 +2,7 @@
 // import React, { ReactElement } from "react";
 // import { useIntl } from "react-intl";
 
+import Layout from "@/components/Layout";
 import { ReactElement } from "react";
 
 // import { AccountLayout, AddressBookCard, Spinner } from "@/components";
@@ -54,5 +55,5 @@ const AddressBookPage = () => <div>AddressBookPage</div>;
 export default AddressBookPage;
 
 AddressBookPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

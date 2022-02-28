@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import React, { ReactElement } from "react";
 
 // import { CheckoutForm, CheckoutSidebar, Layout, Spinner } from "@/components";
@@ -38,5 +39,5 @@ const CheckoutPage = () => {
 export default CheckoutPage;
 
 CheckoutPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

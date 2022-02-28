@@ -1,4 +1,5 @@
 // import { useQueryState } from "next-usequerystate";
+import Layout from "@/components/Layout";
 import React, { ReactElement } from "react";
 // import { useIntl } from "react-intl";
 // import { useDebounce } from "react-use";
@@ -40,7 +41,7 @@ const SearchPage = () => {
 };
 
 SearchPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };
 
 export default SearchPage;

@@ -1,11 +1,12 @@
 // import { useAuthState } from "@saleor/sdk";
 // import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 // import Image from "next/image";
+import Layout from "@/components/Layout";
 import { ReactElement } from "react";
 
 // import { Layout, Spinner } from "@/components";
 // import AddressDisplay from "@/components/checkout/AddressDisplay";
-// import { useRegions } from "@/components/RegionsProvider";
+// import { useLocales } from "@/components/LocalesProvider";
 // import { useOrderDetailsByTokenQuery } from "@/saleor/api";
 
 // export const getStaticProps = async (context: GetStaticPropsContext) => {
@@ -26,7 +27,7 @@ import { ReactElement } from "react";
 // const OrderDetailsPage = ({
 //   token,
 // }: InferGetStaticPropsType<typeof getStaticProps>) => {
-//   const { formatPrice } = useRegions();
+//   const { formatPrice } = useLocales();
 //   const { authenticated } = useAuthState();
 //   const { loading, error, data } = useOrderDetailsByTokenQuery({
 //     variables: { token: token },
@@ -154,5 +155,5 @@ const OrderDetailsPage = () => <div>OrderDetailsPage</div>;
 export default OrderDetailsPage;
 
 OrderDetailsPage.getLayout = function getLayout(page: ReactElement) {
-  return <>{page}</>;
+  return <Layout>{page}</Layout>;
 };

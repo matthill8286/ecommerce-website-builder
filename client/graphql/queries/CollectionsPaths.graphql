@@ -1,0 +1,18 @@
+query Collections(
+  $filters: CollectionFiltersInput
+  $pagination: PaginationArg
+  $sort: [String]
+  $publicationState: PublicationState
+) {
+  collections {
+    data {
+      id
+      attributes {
+        name
+      }
+    }
+    meta {
+      ...Pagination
+    }
+  }
+}

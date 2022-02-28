@@ -1,16 +1,18 @@
-query ProductCollection(
-  $before: String
-  $after: String
-  $filter: ProductFilterInput
-  $locale: LanguageCodeEnum!
+query ProductsCollection(
+  $filters: ProductFiltersInput
+  $pagination: PaginationArg
+  $sort: [String]
+  $publicationState: PublicationState
 ) {
-  products(
-    first: 4
-    locale: $locale
-    after: $after
-    before: $before
-    filter: $filter
-  ) {
-    ...ProductCard
+  products {
+    data {
+      id
+      attributes {
+        name
+      }
+    }
+    meta {
+      ...Pagination
+    }
   }
 }

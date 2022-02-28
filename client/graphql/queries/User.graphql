@@ -1,0 +1,9 @@
+query User {
+  user: me {
+    id
+    username
+    email
+    confirmed
+    blocked
+  }
+}

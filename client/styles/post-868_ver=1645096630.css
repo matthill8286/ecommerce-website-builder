@@ -1,0 +1,380 @@
+.organism-868
+  .organism-element.organism-element-2890862:not(.organism-motion-effects-element-type-background),
+.organism-868
+  .organism-element.organism-element-2890862
+  > .organism-motion-effects-container
+  > .organism-motion-effects-layer {
+  background-color: #f2fafc;
+}
+.organism-868 .organism-element.organism-element-2890862 {
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 100px 15px;
+}
+.organism-868
+  .organism-element.organism-element-2890862
+  > .organism-background-overlay {
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.organism-868
+  .organism-element.organism-element-fe037f7
+  > .organism-widget-wrap
+  > .organism-widget:not(.organism-widget__width-auto):not(.organism-widget__width-initial):not(:last-child):not(.organism-absolute) {
+  margin-bottom: 0;
+}
+.organism-868
+  .organism-element.organism-element-fe037f7
+  > .organism-element-populated {
+  padding: 0 35px 0 30px;
+}
+.organism-868
+  .organism-element.organism-element-f8debaa
+  > .organism-container
+  > .organism-column
+  > .organism-widget-wrap {
+  align-content: center;
+  align-items: center;
+}
+.organism-868
+  .organism-element.organism-element-590866b
+  > .organism-widget-wrap
+  > .organism-widget:not(.organism-widget__width-auto):not(.organism-widget__width-initial):not(:last-child):not(.organism-absolute) {
+  margin-bottom: 0;
+}
+.organism-868
+  .organism-element.organism-element-590866b
+  > .organism-element-populated {
+  padding: 0;
+}
+.organism-868
+  .organism-element.organism-element-8014961
+  .atomic-user-image-control-size {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% 50% 50% 50%;
+}
+.organism-868 .organism-element.organism-element-8014961 {
+  width: auto;
+  max-width: auto;
+}
+.organism-868
+  .organism-element.organism-element-d6cad4e
+  > .organism-widget-wrap
+  > .organism-widget:not(.organism-widget__width-auto):not(.organism-widget__width-initial):not(:last-child):not(.organism-absolute) {
+  margin-bottom: 0;
+}
+.organism-868
+  .organism-element.organism-element-d6cad4e
+  > .organism-element-populated {
+  padding: 0;
+}
+.organism-868
+  .organism-element.organism-element-b5c95ee
+  > .organism-widget-container {
+  margin: 15px 0 5px;
+}
+.organism-868
+  .organism-element.organism-element-7cc70a6
+  > .organism-widget-container {
+  margin: 0 0 15px;
+}
+.organism-868
+  .organism-element.organism-element-11c7e80
+  > .organism-widget-container {
+  margin: 0 0 15px;
+}
+.organism-868
+  .organism-element.organism-element-44d4ca7
+  > .organism-widget-container {
+  margin: 0 0 15px;
+}
+.organism-868
+  .organism-element.organism-element-406cad3
+  > .organism-element-populated {
+  padding: 0;
+}
+.organism-868
+  .organism-element.organism-element-c8c7a98
+  > .organism-widget-container {
+  margin: 50px 10px 0 0;
+}
+.organism-868 .organism-element.organism-element-c8c7a98 {
+  width: 100%;
+  max-width: 100%;
+}
+.organism-868
+  .organism-element.organism-element-bde2a7d
+  > .organism-element-populated {
+  padding: 0;
+}
+.organism-868
+  .organism-element.organism-element-36d40c9
+  > .organism-widget-container {
+  margin: 50px 0 0 10px;
+}
+.organism-868 .organism-element.organism-element-36d40c9 {
+  width: 100%;
+  max-width: 100%;
+}
+.organism-868
+  .organism-element.organism-element-bb54b63
+  .atomic-user-description {
+  font-size: 16px;
+  line-height: 28px;
+  color: #444;
+}
+.organism-868
+  .organism-element.organism-element-bb54b63
+  > .organism-widget-container {
+  margin: 50px 0 0;
+  padding: 0;
+  border-style: solid;
+  border-width: 0;
+}
+.organism-868
+  .organism-element.organism-element-3852c3d
+  > .organism-widget-wrap
+  > .organism-widget:not(.organism-widget__width-auto):not(.organism-widget__width-initial):not(:last-child):not(.organism-absolute) {
+  margin-bottom: 0;
+}
+.organism-868
+  .organism-element.organism-element-3852c3d
+  > .organism-element-populated {
+  padding: 0 30px 0 35px;
+}
+.organism-868
+  .organism-element.organism-element-1b7170d
+  > .organism-widget-container {
+  margin: 8px 0 0;
+}
+.organism-868
+  .organism-element.organism-element-d1447a9
+  .organism-spacer-inner {
+  height: 25px;
+}
+.organism-868
+  .organism-element.organism-element-1443e2b
+  > .organism-element-populated {
+  padding: 0;
+}
+.organism-868
+  .organism-element.organism-element-eca13b7
+  > .organism-widget-container {
+  margin: 100px 0;
+}
+@media (min-width: 768px) {
+  .organism-868 .organism-element.organism-element-590866b {
+    width: 40%;
+  }
+  .organism-868 .organism-element.organism-element-d6cad4e {
+    width: 60%;
+  }
+  .organism-868 .organism-element.organism-element-406cad3 {
+    width: 50%;
+  }
+  .organism-868 .organism-element.organism-element-bde2a7d {
+    width: 50%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .organism-868 .organism-element.organism-element-fe037f7 {
+    width: 100%;
+  }
+  .organism-868 .organism-element.organism-element-590866b {
+    width: 100%;
+  }
+  .organism-868 .organism-element.organism-element-d6cad4e {
+    width: 100%;
+  }
+  .organism-868 .organism-element.organism-element-3852c3d {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .organism-868 .organism-element.organism-element-2890862 {
+    padding: 50px 15px;
+  }
+  .organism-868
+    .organism-element.organism-element-fe037f7.organism-column
+    > .organism-widget-wrap {
+    justify-content: center;
+  }
+  .organism-868
+    .organism-element.organism-element-fe037f7
+    > .organism-element-populated {
+    padding: 0;
+  }
+  .organism-868
+    .organism-element.organism-element-f8debaa
+    > .organism-container {
+    max-width: 600px;
+  }
+  .organism-868
+    .organism-element.organism-element-590866b.organism-column
+    > .organism-widget-wrap {
+    justify-content: center;
+  }
+  .organism-868
+    .organism-element.organism-element-8014961
+    > .organism-widget-container {
+    margin: 0 0 20px;
+  }
+  .organism-868 .organism-element.organism-element-b5c95ee .atomic-user__name {
+    text-align: center;
+  }
+  .organism-868 .organism-element.organism-element-7cc70a6 .atomic-user-date {
+    text-align: center;
+  }
+  .organism-868 .organism-element.organism-element-11c7e80 .atomic-address {
+    text-align: center;
+  }
+  .organism-868
+    .organism-element.organism-element-44d4ca7
+    .atomic-social-profiles--user {
+    text-align: center;
+  }
+  .organism-868
+    .organism-element.organism-element-16cb534
+    > .organism-container {
+    max-width: 600px;
+  }
+  .organism-868
+    .organism-element.organism-element-c8c7a98
+    > .organism-widget-container {
+    margin: 35px 0 0;
+  }
+  .organism-868
+    .organism-element.organism-element-36d40c9
+    > .organism-widget-container {
+    margin: 35px 0 0 10px;
+  }
+  .organism-868
+    .organism-element.organism-element-bb54b63
+    .atomic-user-description {
+    text-align: left;
+  }
+  .organism-868
+    .organism-element.organism-element-bb54b63
+    > .organism-widget-container {
+    margin: 30px 0 0;
+  }
+  .organism-868 .organism-element.organism-element-bb54b63 {
+    width: 600px;
+    max-width: 600px;
+  }
+  .organism-868
+    .organism-element.organism-element-3852c3d.organism-column
+    > .organism-widget-wrap {
+    justify-content: center;
+  }
+  .organism-868
+    .organism-element.organism-element-3852c3d
+    > .organism-element-populated {
+    padding: 30px 0 0;
+  }
+  .organism-868 .organism-element.organism-element-0451205 {
+    text-align: center;
+  }
+  .organism-868 .organism-element.organism-element-1b7170d .atomic-shape {
+    text-align: center;
+  }
+  .organism-868 .organism-element.organism-element-d1447a9 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .organism-868
+    .organism-element.organism-element-eca13b7
+    > .organism-widget-container {
+    margin: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .organism-868 .organism-element.organism-element-fe037f7 {
+    width: 100%;
+  }
+  .organism-868
+    .organism-element.organism-element-fe037f7.organism-column
+    > .organism-widget-wrap {
+    justify-content: center;
+  }
+  .organism-868
+    .organism-element.organism-element-fe037f7
+    > .organism-element-populated {
+    padding: 0;
+  }
+  .organism-868
+    .organism-element.organism-element-f8debaa
+    > .organism-container {
+    max-width: 500px;
+  }
+  .organism-868
+    .organism-element.organism-element-590866b.organism-column
+    > .organism-widget-wrap {
+    justify-content: center;
+  }
+  .organism-868
+    .organism-element.organism-element-8014961
+    > .organism-widget-container {
+    margin: 0 0 15px;
+  }
+  .organism-868 .organism-element.organism-element-b5c95ee .atomic-user__name {
+    text-align: center;
+  }
+  .organism-868 .organism-element.organism-element-7cc70a6 .atomic-user-date {
+    text-align: center;
+  }
+  .organism-868 .organism-element.organism-element-11c7e80 .atomic-address {
+    text-align: center;
+  }
+  .organism-868
+    .organism-element.organism-element-44d4ca7
+    .atomic-social-profiles--user {
+    text-align: center;
+  }
+  .organism-868
+    .organism-element.organism-element-16cb534
+    > .organism-container {
+    max-width: 500px;
+  }
+  .organism-868
+    .organism-element.organism-element-c8c7a98
+    > .organism-widget-container {
+    margin: 25px 0 0;
+  }
+  .organism-868 .organism-element.organism-element-c8c7a98 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .organism-868
+    .organism-element.organism-element-36d40c9
+    > .organism-widget-container {
+    margin: 25px 0 0;
+  }
+  .organism-868 .organism-element.organism-element-36d40c9 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .organism-868
+    .organism-element.organism-element-bb54b63
+    > .organism-widget-container {
+    margin: 0;
+    padding: 20px 0 0;
+    border-width: 0;
+  }
+  .organism-868 .organism-element.organism-element-bb54b63 {
+    width: 500px;
+    max-width: 500px;
+  }
+  .organism-868
+    .organism-element.organism-element-3852c3d
+    > .organism-element-populated {
+    margin: 35px 0 0;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0;
+  }
+  .organism-868
+    .organism-element.organism-element-eca13b7
+    > .organism-widget-container {
+    margin: 50px 0;
+  }
+}
