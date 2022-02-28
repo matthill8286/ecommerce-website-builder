@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "collections",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "Category",
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "Collection",
     "description": ""
   },
   "options": {
@@ -19,7 +19,10 @@
       "type": "uid",
       "targetField": "name"
     },
-    "categoryImage": {
+    "description": {
+      "type": "text"
+    },
+    "backgroundImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -30,13 +33,7 @@
         "audios"
       ]
     },
-    "products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "categories"
-    },
-    "categoryMetadata": {
+    "collectionMetadata": {
       "type": "component",
       "repeatable": false,
       "component": "meta.metadata"
