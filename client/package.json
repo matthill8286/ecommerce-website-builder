@@ -1,6 +1,11 @@
 {
-  "name": "my-next-corporate",
-  "version": "1.0.4",
+  "name": "better-than-bazeraki",
+  "version": "0.0.4",
+  "author": {
+    "email": "matthill8286@gmail.com",
+    "name": "Matthew Hill",
+    "url": "https://github.com/matthill8286"
+  },
   "private": true,
   "scripts": {
     "debug": "NODE_OPTIONS='--inspect' next dev --port 3001",
@@ -22,17 +27,23 @@
     "@matthill8286/atomic-ui": "^1.3.53",
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.23.0",
+    "apollo-link-token-refresh": "^0.4.0",
+    "cookie": "^0.4.2",
+    "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
     "dotenv-cli": "^5.0.0",
     "editorjs-blocks-react-renderer": "^1.2.4",
     "formik": "^2.2.6",
     "graphql": "16.3.0",
     "js-cookie": "3.0.0-rc.4",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "mobx": "^6.4.2",
     "mobx-react": "^7.3.0",
     "mobx-state-tree": "^5.1.3",
     "next": "12.1.0",
     "next-auth": "^4.2.1",
+    "next-connect": "^0.12.2",
     "next-seo": "^5.1.0",
     "next-sitemap": "^2.4.3",
     "next-usequerystate": "1.7.0",
@@ -47,7 +58,8 @@
     "react-use": "^17.3.2",
     "sharp": "^0.30.1",
     "stripe": "^8.137.0",
-    "styled-components": "^5.2.3"
+    "styled-components": "^5.2.3",
+    "util": "^0.12.4"
   },
   "devDependencies": {
     "@formatjs/cli": "^4.8.2",
@@ -58,9 +70,9 @@
     "@graphql-codegen/typescript-operations": "2.3.2",
     "@graphql-codegen/typescript-react-apollo": "3.2.8",
     "@next/bundle-analyzer": "^12.1.0",
+    "@types/next-auth": "^3.15.0",
     "@types/qs": "^6.9.7",
     "@types/react": "17.0.39",
-    "@types/next-auth": "^3.15.0",
     "@types/styled-components": "5.1.9",
     "autoprefixer": "10.4.2",
     "babel-plugin-styled-components": "^1.12.0",

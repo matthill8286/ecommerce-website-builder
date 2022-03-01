@@ -36,16 +36,6 @@
       "configurable": false,
       "private": true
     },
-    "resetPasswordToken": {
-      "type": "string",
-      "configurable": false,
-      "private": true
-    },
-    "confirmationToken": {
-      "type": "string",
-      "configurable": false,
-      "private": true
-    },
     "confirmed": {
       "type": "boolean",
       "default": false,
@@ -56,12 +46,21 @@
       "default": false,
       "configurable": false
     },
+    "resetPasswordToken": {
+      "type": "string",
+      "private": true,
+      "default": "1"
+    },
+    "confirmationToken": {
+      "type": "string",
+      "private": true,
+      "default": "1"
+    },
     "role": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.role",
-      "inversedBy": "users",
-      "configurable": true
+      "inversedBy": "users"
     }
   }
 }
