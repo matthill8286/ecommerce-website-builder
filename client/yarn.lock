@@ -1191,10 +1191,10 @@
     react "^16.13.1"
     styled-components "*"
 
-"@matthill8286/atomic-ui@^1.3.53":
-  version "1.3.53"
-  resolved "https://npm.pkg.github.com/download/@matthill8286/atomic-ui/1.3.53/388f0139e77bb058e3881a1d43796f6207f0480a536cdd19bb5ae03ab0e21316#523f592b1157b9b38d10af11881fc09be6de29de"
-  integrity sha512-t/3bc31R//2PgSxvRatm0a+WGRBhobzdg9SsPzAgGwAr1U/k9p1p79ArsbaumLTXFMv7C2yjREdOIAXIJQc9pg==
+"@matthill8286/atomic-ui@^1.3.54":
+  version "1.3.54"
+  resolved "https://npm.pkg.github.com/download/@matthill8286/atomic-ui/1.3.54/d566c7ddc76f1c99805f95715afc6ce1bb684ae6732edca4c8f2e5776645392c#1e4782338df39bdadf2f9c76eaa0c0b82f8a9109"
+  integrity sha512-fWahDMYAOYlWjr6cFgB7CHqNWBfYvqMKTn7dl9o/+6kf46WuFnY54kgL2CuGnI6d3o8kO4JElVUfjd+m3LH1sg==
   dependencies:
     "@lifarl/react-scroll-snap-slider" "^2.0.3"
     "@matthill8286/atomic-icon-library" "^1.0.7"
