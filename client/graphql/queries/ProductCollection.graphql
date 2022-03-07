@@ -1,14 +1,10 @@
-query ProductsCollection(
-  $filters: ProductFiltersInput
-  $pagination: PaginationArg
-  $sort: [String]
-  $publicationState: PublicationState
-) {
+query ProductsCollection {
   products {
     data {
       id
       attributes {
         name
+        slug
       }
     }
     meta {

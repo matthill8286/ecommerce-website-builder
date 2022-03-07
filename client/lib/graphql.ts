@@ -8,7 +8,6 @@ const httpLink = createHttpLink({
 const apolloClient = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
-  ssrMode: !process.browser,
 });
 
 export default apolloClient;

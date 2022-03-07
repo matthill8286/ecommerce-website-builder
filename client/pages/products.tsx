@@ -8,6 +8,18 @@
 // } from "next";
 // import Link from "next/link";
 import Layout from "@/components/Layout";
+import apolloClient from "@/lib/graphql";
+import { usePaths } from "@/lib/paths";
+import { pagePaths } from "@/lib/ssr/page";
+import {
+  Product,
+  ProductsCollectionQueryVariables,
+  PublicationState,
+  useProductsCollectionQuery,
+} from "@/strapi/hooks";
+import { ApolloQueryResult } from "@apollo/client";
+import { Card, Heading } from "@matthill8286/atomic-ui";
+import { GetStaticPaths } from "next";
 import { useRouter } from "next/router";
 // import Custom404 from "pages/404";
 import React, { ReactElement } from "react";
@@ -17,7 +29,7 @@ import React, { ReactElement } from "react";
 // import { AttributeDetails } from "@/components/product/AttributeDetails";
 // import { ProductGallery } from "@/components/product/ProductGallery";
 // import { useLocales } from "@/components/LocalesProvider";
-// import { ProductPageSeo } from "@/components/seo/ProductPageSeo";
+// import { ProductsPageSeo } from "@/components/seo/ProductsPageSeo";
 // import { messages } from "@/components/translations";
 // import apolloClient from "@/lib/graphql";
 // import { usePaths } from "@/lib/paths";
@@ -30,6 +42,11 @@ import React, { ReactElement } from "react";
 // } from "@/lib/regions";
 // import { productPaths } from "@/lib/ssr/product";
 // import { translate } from "@/lib/translations";
+import {
+  ProductsCollectionQuery,
+  ProductsCollectionDocument,
+  ProductsCollectionQueryResult,
+} from "../strapi/hooks";
 // import {
 //   CheckoutError,
 //   ProductBySlugDocument,
@@ -43,8 +60,17 @@ export type OptionalQuery = {
   variant?: string;
 };
 
-const ProductPage = ({ product }: any) => {
+const ProductsPage = ({ products }: ProductsCollectionQueryResult["data"]) => {
   const router = useRouter();
+
+  console.log(">> logging", { products });
+
+  // const { data, loading, error } = useProductsCollectionQuery();
+
+  // console.log(">> logging", { data, loading, error });
+
+  const paths = usePaths();
+
   // const paths = usePaths();
   // const t = useIntl();
   // const { currentChannel, formatPrice } = useLocales();
@@ -59,9 +85,9 @@ const ProductPage = ({ product }: any) => {
   // const [loadingAddToCheckout, setLoadingAddToCheckout] = useState(false);
   // const [addToCartError, setAddToCartError] = useState("");
 
-  if (!product?.id) {
-    return "<Custom404 />";
-  }
+  // if (!product?.id) {
+  //   return "<Custom404 />";
+  // }
 
   // const selectedVariantID = getSelectedVariantID(product, router);
 
@@ -145,43 +171,58 @@ const ProductPage = ({ product }: any) => {
   //   selectedVariant?.pricing?.price?.gross ||
   //   product.pricing?.priceRange?.start?.gross;
 
-  return (
-    <>
-      {router.query.locale}
-      {product.name}
-    </>
-  );
+  if (!products) {
+    return null;
+  }
+
+  const productsMap = () =>
+    products.data.map(({ id, attributes }) => (
+      <Card
+        key={id}
+        elevation={1}
+        elevationHover={3}
+        padding="md"
+        noBorder={"none"}
+      >
+        <Heading
+          scale="level-3"
+          onClick={() =>
+            router.push(paths.product._slug(attributes.slug).$url())
+          }
+        >
+          {attributes.name}
+        </Heading>
+      </Card>
+    ));
+
+  return <>{productsMap()}</>;
 };
 
-export default ProductPage;
+export default ProductsPage;
 
 // export const getStaticPaths: GetStaticPaths = async () => {
-//   // Temporally do not render all possible products during the build time
-//   // const paths = await productPaths();
+//   const paths = await pagePaths();
 //   return {
-//     paths: [],
+//     paths,
 //     fallback: "blocking",
 //   };
 // };
 
-// export const getStaticProps = async (context: GetStaticPropsContext) => {
-//   const productSlug = context.params?.slug?.toString()!;
-//   const response: ApolloQueryResult<ProductBySlugQuery> =
-//     await apolloClient.query<ProductBySlugQuery, ProductBySlugQueryVariables>({
-//       query: ProductBySlugDocument,
-//       variables: {
-//         slug: productSlug,
-//         ...contextToRegionQuery(context),
-//       },
-//     });
-//   return {
-//     props: {
-//       product: response.data.product,
-//     },
-//     revalidate: 60, // value in seconds, how often ISR will trigger on the server
-//   };
-// };
+export const getStaticProps = async () => {
+  const response: ApolloQueryResult<ProductsCollectionQuery> =
+    await apolloClient.query<
+      ProductsCollectionQuery,
+      ProductsCollectionQueryVariables
+    >({
+      query: ProductsCollectionDocument,
+    });
+  return {
+    props: {
+      products: response.data.products,
+    },
+  };
+};
 
-ProductPage.getLayout = function getLayout(page: ReactElement) {
+ProductsPage.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };

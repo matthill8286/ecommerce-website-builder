@@ -27,10 +27,14 @@ export const pagePaths = async () => {
       });
 
     const edges = response.data.pages.data;
+
+    console.log(">> logging", { edges });
+
     if (!edges) {
       break;
     }
-    const responseSlugs: string[] = edges.map((edge) => edge.attributes.slug);
+
+    const responseSlugs: string[] = edges.map((edge) => edge?.attributes?.slug);
 
     for (let locale of LOCALES) {
       responseSlugs.forEach((slug) => {

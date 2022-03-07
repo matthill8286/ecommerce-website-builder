@@ -73,11 +73,11 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
       <ApolloProvider client={apolloClient}>
         <Provider store={store}>
           <ThemeProvider theme={alternateTheme}>
-            <SessionProvider session={pageProps.session} refetchInterval={0}>
-              <LocalesProvider>
-                {getLayout(<Component {...pageProps} />)}
-              </LocalesProvider>
-            </SessionProvider>
+            {/* <SessionProvider session={pageProps.session} refetchInterval={0}> */}
+            <LocalesProvider>
+              {getLayout(<Component {...pageProps} />)}
+            </LocalesProvider>
+            {/* </SessionProvider> */}
           </ThemeProvider>
         </Provider>
       </ApolloProvider>

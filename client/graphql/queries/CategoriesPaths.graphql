@@ -1,11 +1,14 @@
-query ProductById($id: ID!) {
-  product(id: $id) {
+query Categories {
+  categories {
     data {
       id
       attributes {
         name
         slug
       }
+    }
+    meta {
+      ...Pagination
     }
   }
 }

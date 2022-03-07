@@ -1,8 +1,4 @@
-query LeadFormSubmissions(
-  $filters: LeadFormSubmissionFiltersInput
-  $pagination: PaginationArg = {}
-  $sort: [String] = []
-) {
+query LeadFormSubmissions {
   leadFormSubmission {
     data {
       id

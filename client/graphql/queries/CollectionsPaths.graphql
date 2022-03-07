@@ -1,14 +1,10 @@
-query Collections(
-  $filters: CollectionFiltersInput
-  $pagination: PaginationArg
-  $sort: [String]
-  $publicationState: PublicationState
-) {
+query Collections {
   collections {
     data {
       id
       attributes {
         name
+        slug
       }
     }
     meta {

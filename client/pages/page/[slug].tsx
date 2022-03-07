@@ -8,6 +8,12 @@
 // import { ReactElement } from "react";
 
 import Layout from "@/components/Layout";
+import apolloClient from "@/lib/graphql";
+import { contextToRegionQuery } from "@/lib/regions";
+import { pagePaths } from "@/lib/ssr/page";
+import { GetPagesQueryVariables } from "@/strapi/api";
+import { ApolloQueryResult } from "@apollo/client";
+import { GetStaticPaths, GetStaticPropsContext } from "next";
 import { ReactElement } from "react";
 
 // import { Layout, RichText } from "@/components";
@@ -17,7 +23,7 @@ import { ReactElement } from "react";
 // import { translate } from "@/lib/translations";
 // import { PageDocument, PageQuery, PageQueryVariables } from "@/saleor/api";
 
-const PagePage = ({ page }: any) => {
+const PagePage = ({ page, children }) => {
   console.log(">> logging", { page });
   if (!page?.id) {
     return "<Custom404 />";
@@ -25,40 +31,46 @@ const PagePage = ({ page }: any) => {
 
   // const content = translate(page, "content");
 
-  return <main className="max-w-7xl mx-auto pt-8 px-8">{page.id}</main>;
+  console.log(">> logging", { t: page.id });
+
+  return <main className="max-w-7xl mx-auto pt-8 px-8">{children}</main>;
 };
 
 export default PagePage;
 
 export interface pathParams {
-  channel: string;
   locale: string;
   slug: string;
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const paths = await pagePaths();
-//   return {
-//     paths,
-//     fallback: "blocking",
-//   };
-// };
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = await pagePaths();
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
 
 // export const getStaticProps = async (context: GetStaticPropsContext) => {
 //   const pageSlug = context.params?.slug?.toString()!;
-//   const response: ApolloQueryResult<PageQuery> = await apolloClient.query<
-//     PageQuery,
-//     PageQueryVariables
+//   console.log(">> logging", { pageSlug });
+//   const response: ApolloQueryResult<GetPagesQuery> = await apolloClient.query<
+//     GetPagesQuery,
+//     GetPagesQueryVariables
 //   >({
-//     query: PageDocument,
+//     query: GetPagesDocument,
 //     variables: {
 //       slug: pageSlug,
-//       locale: contextToRegionQuery(context).locale,
+//       publicationState: "LIVE",
+//       locale: "en-GB",
 //     },
 //   });
+
+//   console.log(">> logging", { response });
+
 //   return {
 //     props: {
-//       page: response.data.page,
+//       page: response.data.pages,
 //     },
 //   };
 // };

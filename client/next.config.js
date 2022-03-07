@@ -7,16 +7,4 @@ const withAtomicUI = require("next-transpile-modules")([
   "@matthill8286/atomic-icon-library",
 ]);
 
-module.exports = withAtomicUI(
-  withBundleAnalyzer({
-    async redirects() {
-      return [
-        {
-          source: "/",
-          destination: "/en-GB",
-          permanent: true,
-        },
-      ];
-    },
-  })
-);
+module.exports = withAtomicUI(withBundleAnalyzer({}));

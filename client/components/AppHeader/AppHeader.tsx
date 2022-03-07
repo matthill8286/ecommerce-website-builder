@@ -16,6 +16,7 @@ import {
 import { AppHeaderProps } from "./AppHeader.interface";
 import { usePaths } from "@/lib/paths";
 import Link from "next/link";
+import { HamburgerButton } from "../HamburgerButton";
 
 export const AppHeaderComponent = React.memo<AppHeaderProps>(
   ({ headerContent, renderSearchBar, logo, onLogoClick }: AppHeaderProps) => {
@@ -36,21 +37,18 @@ export const AppHeaderComponent = React.memo<AppHeaderProps>(
               />
             </StyledLogo>
           )}
+          <HamburgerButton onClick={() => internalLogoClick()} />
           <StyledActionItems>
             {headerContent?.searchEnabled && (
               <StyledItemWrapper>{renderSearchBar}</StyledItemWrapper>
             )}
 
             <StyledItemWrapper>
-              <Link href={paths.products._slug("all").$url()}>
-                <CopyText color="white">
-                  Products
-                </CopyText>
+              <Link href={paths.products.$url()}>
+                <CopyText color="white">Products</CopyText>
               </Link>
-              <Link href={paths.collection._slug().$url()}>
-                <CopyText color="white">
-                  Products
-                </CopyText>
+              <Link href={paths.collections.$url()}>
+                <CopyText color="white">Collections</CopyText>
               </Link>
             </StyledItemWrapper>
           </StyledActionItems>

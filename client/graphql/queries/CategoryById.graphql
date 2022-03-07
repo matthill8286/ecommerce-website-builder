@@ -1,5 +1,5 @@
-query CollectionsById($id: ID!) {
-  collection(id: $id) {
+query CategoryById($id: ID!) {
+  category(id: $id) {
     data {
       id
       attributes {

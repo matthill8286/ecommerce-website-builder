@@ -1,7 +1,7 @@
 const excludedPaths = ["/cart", "/checkout", "/account/*"];
 
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_API_URI,
+  siteUrl: process.env.NEXT_STRAPI_API_URI,
   generateRobotsTxt: true,
   exclude: excludedPaths + ["/[sitemap]"],
   robotsTxtOptions: {

@@ -5,6 +5,11 @@
 //   InferGetStaticPropsType,
 // } from "next";
 import Layout from "@/components/Layout";
+import apolloClient from "@/lib/graphql";
+import { contextToRegionQuery } from "@/lib/regions";
+import { pagePaths } from "@/lib/ssr/page";
+import { ApolloQueryResult } from "@apollo/client";
+import { GetStaticPaths, GetStaticPropsContext } from "next";
 import React, { ReactElement } from "react";
 // import { useIntl } from "react-intl";
 
@@ -13,29 +18,22 @@ import React, { ReactElement } from "react";
 // import apolloClient from "@/lib/graphql";
 // import { contextToRegionQuery } from "@/lib/regions";
 // import { homepagePaths } from "@/lib/ssr/homepage";
+import PagePage from "./page/[slug]";
 // import {
 //   HomepageBlocksQuery,
 //   HomepageBlocksQueryDocument,
 //   HomepageBlocksQueryVariables,
 // } from "@/saleor/api";
 
-const Home = ({ menuData }: any) => {
+const Home = ({ context }) => {
   // const t = useIntl();
+
+  console.log(">> logging", { context });
   return (
     <>
       {/* <BaseSeo /> */}
       <div className="py-10">
-        <header className="mb-4">
-          <div className="max-w-7xl mx-auto px-8">Home Page</div>
-        </header>
-        <main>
-          <div className="max-w-7xl mx-auto px-8">
-            {menuData?.menu?.items?.map((m: any) => {
-              // if (!!m) return <HomepageBlock key={m.id} menuItem={m} />;
-              return null;
-            })}
-          </div>
-        </main>
+        <main>Home Page</main>
       </div>
     </>
   );
@@ -64,6 +62,39 @@ export default Home;
 //       menuData: result?.data,
 //     },
 //     revalidate: 60 * 60, // value in seconds, how often ISR will trigger on the server
+//   };
+// };
+
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   // const paths = await pagePaths();
+//   return {
+//     paths: [],
+//     fallback: "blocking",
+//   };
+// };
+
+// export const getStaticProps = async (context: GetStaticPropsContext) => {
+//   const pageSlug = context.params?.slug?.toString()!;
+
+//   console.log(">> logging", { t: context.params });
+
+//   const response: ApolloQueryResult<GetPagesQuery> = await apolloClient.query<
+//     GetPagesQuery,
+//     GetPagesQueryVariables
+//   >({
+//     query: GetPagesDocument,
+//     variables: {
+//       slug: "home",
+//       publicationState: PublicationState.Live,
+//       locale: "en-GB",
+//     },
+//   });
+
+//   return {
+//     props: {
+//       context,
+//       page: response,
+//     },
 //   };
 // };
 

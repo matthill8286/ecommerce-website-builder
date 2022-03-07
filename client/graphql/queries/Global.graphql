@@ -1,5 +1,5 @@
 query Global($locale: I18NLocaleCode) {
-  global {
+  global(locale: $locale) {
     data {
       id
       attributes {

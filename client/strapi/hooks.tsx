@@ -1838,6 +1838,18 @@ export type ResetPasswordMutationVariables = Exact<{
 
 export type ResetPasswordMutation = { __typename?: 'Mutation', resetPassword?: { __typename?: 'UsersPermissionsLoginPayload', jwt?: string | null, user: { __typename?: 'UsersPermissionsMe', id: string, username: string, email?: string | null, confirmed?: boolean | null, blocked?: boolean | null, role?: { __typename?: 'UsersPermissionsMeRole', name: string } | null } } | null };
 
+export type CategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CategoriesQuery = { __typename?: 'Query', categories?: { __typename?: 'CategoryEntityResponseCollection', data: Array<{ __typename?: 'CategoryEntity', id?: string | null, attributes?: { __typename?: 'Category', name?: string | null, slug?: string | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
+
+export type CategoryByIdQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type CategoryByIdQuery = { __typename?: 'Query', category?: { __typename?: 'CategoryEntityResponse', data?: { __typename?: 'CategoryEntity', id?: string | null, attributes?: { __typename?: 'Category', name?: string | null } | null } | null } | null };
+
 export type CollectionsByIdQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
@@ -1845,15 +1857,10 @@ export type CollectionsByIdQueryVariables = Exact<{
 
 export type CollectionsByIdQuery = { __typename?: 'Query', collection?: { __typename?: 'CollectionEntityResponse', data?: { __typename?: 'CollectionEntity', id?: string | null, attributes?: { __typename?: 'Collection', name?: string | null } | null } | null } | null };
 
-export type CollectionsQueryVariables = Exact<{
-  filters?: InputMaybe<CollectionFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>>;
-  publicationState?: InputMaybe<PublicationState>;
-}>;
+export type CollectionsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CollectionsQuery = { __typename?: 'Query', collections?: { __typename?: 'CollectionEntityResponseCollection', data: Array<{ __typename?: 'CollectionEntity', id?: string | null, attributes?: { __typename?: 'Collection', name?: string | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
+export type CollectionsQuery = { __typename?: 'Query', collections?: { __typename?: 'CollectionEntityResponseCollection', data: Array<{ __typename?: 'CollectionEntity', id?: string | null, attributes?: { __typename?: 'Collection', name?: string | null, slug?: string | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
 
 export type GlobalQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['I18NLocaleCode']>;
@@ -1869,16 +1876,12 @@ export type LeadFormSubmissionByIdQueryVariables = Exact<{
 
 export type LeadFormSubmissionByIdQuery = { __typename?: 'Query', leadFormSubmission?: { __typename?: 'LeadFormSubmissionEntityResponse', data?: { __typename?: 'LeadFormSubmissionEntity', id?: string | null, attributes?: { __typename?: 'LeadFormSubmission', email?: string | null, status?: Enum_Leadformsubmission_Status | null, location?: string | null } | null } | null } | null };
 
-export type LeadFormSubmissionsQueryVariables = Exact<{
-  filters?: InputMaybe<LeadFormSubmissionFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>>;
-}>;
+export type LeadFormSubmissionsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type LeadFormSubmissionsQuery = { __typename?: 'Query', leadFormSubmission?: { __typename?: 'LeadFormSubmissionEntityResponse', data?: { __typename?: 'LeadFormSubmissionEntity', id?: string | null, attributes?: { __typename?: 'LeadFormSubmission', email?: string | null, status?: Enum_Leadformsubmission_Status | null, location?: string | null } | null } | null } | null };
 
-export type GetPagesQueryVariables = Exact<{
+export type GetPageQueryVariables = Exact<{
   slug: Scalars['String'];
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>>;
   publicationState: PublicationState;
@@ -1886,7 +1889,7 @@ export type GetPagesQueryVariables = Exact<{
 }>;
 
 
-export type GetPagesQuery = { __typename?: 'Query', pages?: { __typename?: 'PageEntityResponseCollection', data: Array<{ __typename?: 'PageEntity', id?: string | null, attributes?: { __typename?: 'Page', locale?: string | null, slug?: string | null, localizations?: { __typename?: 'PageRelationResponseCollection', data: Array<{ __typename?: 'PageEntity', id?: string | null, attributes?: { __typename?: 'Page', locale?: string | null } | null }> } | null, metadata: { __typename?: 'ComponentMetaMetadata', metaTitle: string, metaDescription: string, twitterCardType?: Enum_Componentmetametadata_Twittercardtype | null, twitterUsername?: string | null, shareImage?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null }, contentSections?: Array<{ __typename: 'ComponentSectionsBottomActions', id: string, title?: string | null, buttons?: Array<{ __typename?: 'ComponentLinksButtonLink', id: string, newTab?: boolean | null, text?: string | null, type?: Enum_Componentlinksbuttonlink_Type | null, url?: string | null } | null> | null } | { __typename: 'ComponentSectionsFeatureColumnsGroup', id: string, features?: Array<{ __typename?: 'ComponentElementsFeatureColumn', id: string, description?: string | null, title: string, icon?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | null> | null } | { __typename: 'ComponentSectionsFeatureRowsGroup', id: string, features?: Array<{ __typename?: 'ComponentElementsFeatureRow', id: string, description?: string | null, title: string, link?: { __typename?: 'ComponentLinksLink', id: string, newTab?: boolean | null, text: string, url: string } | null, media: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } } | null> | null } | { __typename: 'ComponentSectionsHero', id: string, title?: string | null, description?: string | null, label?: string | null, buttons?: Array<{ __typename?: 'ComponentLinksButtonLink', id: string, newTab?: boolean | null, text?: string | null, type?: Enum_Componentlinksbuttonlink_Type | null, url?: string | null } | null> | null, picture?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | { __typename: 'ComponentSectionsLargeVideo', id: string, description?: string | null, title?: string | null, poster?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null, video: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } } | { __typename: 'ComponentSectionsLeadForm', id: string, emailPlaceholder?: string | null, location?: string | null, title?: string | null, submitButton?: { __typename?: 'ComponentLinksButton', id: string, text?: string | null, type?: Enum_Componentlinksbutton_Type | null } | null } | { __typename: 'ComponentSectionsPricing', id: string, title?: string | null, plans?: Array<{ __typename?: 'ComponentElementsPlan', description?: string | null, id: string, isRecommended?: boolean | null, name?: string | null, price?: number | null, pricePeriod?: string | null, features?: Array<{ __typename?: 'ComponentElementsFeature', id: string, name?: string | null } | null> | null } | null> | null } | { __typename: 'ComponentSectionsRichText', id: string, content?: string | null } | { __typename: 'ComponentSectionsTestimonialsGroup', id: string, description?: string | null, title?: string | null, link?: { __typename?: 'ComponentLinksLink', id: string, newTab?: boolean | null, text: string, url: string } | null, logos?: Array<{ __typename?: 'ComponentElementsLogos', id: string, title?: string | null, logo?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | null> | null, testimonials?: Array<{ __typename?: 'ComponentElementsTestimonial', id: string, text?: string | null, authorName?: string | null, authorTitle?: string | null, link?: string | null, logo?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null, picture?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | null> | null } | { __typename: 'Error' } | null> | null } | null }> } | null };
+export type GetPageQuery = { __typename?: 'Query', pages?: { __typename?: 'PageEntityResponseCollection', data: Array<{ __typename?: 'PageEntity', id?: string | null, attributes?: { __typename?: 'Page', locale?: string | null, slug?: string | null, localizations?: { __typename?: 'PageRelationResponseCollection', data: Array<{ __typename?: 'PageEntity', id?: string | null, attributes?: { __typename?: 'Page', locale?: string | null } | null }> } | null, metadata: { __typename?: 'ComponentMetaMetadata', metaTitle: string, metaDescription: string, twitterCardType?: Enum_Componentmetametadata_Twittercardtype | null, twitterUsername?: string | null, shareImage?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null }, contentSections?: Array<{ __typename: 'ComponentSectionsBottomActions', id: string, title?: string | null, buttons?: Array<{ __typename?: 'ComponentLinksButtonLink', id: string, newTab?: boolean | null, text?: string | null, type?: Enum_Componentlinksbuttonlink_Type | null, url?: string | null } | null> | null } | { __typename: 'ComponentSectionsFeatureColumnsGroup', id: string, features?: Array<{ __typename?: 'ComponentElementsFeatureColumn', id: string, description?: string | null, title: string, icon?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | null> | null } | { __typename: 'ComponentSectionsFeatureRowsGroup', id: string, features?: Array<{ __typename?: 'ComponentElementsFeatureRow', id: string, description?: string | null, title: string, link?: { __typename?: 'ComponentLinksLink', id: string, newTab?: boolean | null, text: string, url: string } | null, media: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } } | null> | null } | { __typename: 'ComponentSectionsHero', id: string, title?: string | null, description?: string | null, label?: string | null, buttons?: Array<{ __typename?: 'ComponentLinksButtonLink', id: string, newTab?: boolean | null, text?: string | null, type?: Enum_Componentlinksbuttonlink_Type | null, url?: string | null } | null> | null, picture?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | { __typename: 'ComponentSectionsLargeVideo', id: string, description?: string | null, title?: string | null, poster?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null, video: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } } | { __typename: 'ComponentSectionsLeadForm', id: string, emailPlaceholder?: string | null, location?: string | null, title?: string | null, submitButton?: { __typename?: 'ComponentLinksButton', id: string, text?: string | null, type?: Enum_Componentlinksbutton_Type | null } | null } | { __typename: 'ComponentSectionsPricing', id: string, title?: string | null, plans?: Array<{ __typename?: 'ComponentElementsPlan', description?: string | null, id: string, isRecommended?: boolean | null, name?: string | null, price?: number | null, pricePeriod?: string | null, features?: Array<{ __typename?: 'ComponentElementsFeature', id: string, name?: string | null } | null> | null } | null> | null } | { __typename: 'ComponentSectionsRichText', id: string, content?: string | null } | { __typename: 'ComponentSectionsTestimonialsGroup', id: string, description?: string | null, title?: string | null, link?: { __typename?: 'ComponentLinksLink', id: string, newTab?: boolean | null, text: string, url: string } | null, logos?: Array<{ __typename?: 'ComponentElementsLogos', id: string, title?: string | null, logo?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | null> | null, testimonials?: Array<{ __typename?: 'ComponentElementsTestimonial', id: string, text?: string | null, authorName?: string | null, authorTitle?: string | null, link?: string | null, logo?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null, picture?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', alternativeText?: string | null, width?: number | null, height?: number | null, mime: string, url: string, formats?: any | null } | null } | null } | null } | null> | null } | { __typename: 'Error' } | null> | null } | null }> } | null };
 
 export type PagePathsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1898,17 +1901,17 @@ export type ProductByIdQueryVariables = Exact<{
 }>;
 
 
-export type ProductByIdQuery = { __typename?: 'Query', product?: { __typename?: 'ProductEntityResponse', data?: { __typename?: 'ProductEntity', id?: string | null, attributes?: { __typename?: 'Product', name?: string | null } | null } | null } | null };
+export type ProductByIdQuery = { __typename?: 'Query', product?: { __typename?: 'ProductEntityResponse', data?: { __typename?: 'ProductEntity', id?: string | null, attributes?: { __typename?: 'Product', name?: string | null, slug?: string | null } | null } | null } | null };
 
-export type ProductsCollectionQueryVariables = Exact<{
-  filters?: InputMaybe<ProductFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>>;
-  publicationState?: InputMaybe<PublicationState>;
-}>;
+export type ProductsCollectionQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ProductsCollectionQuery = { __typename?: 'Query', products?: { __typename?: 'ProductEntityResponseCollection', data: Array<{ __typename?: 'ProductEntity', id?: string | null, attributes?: { __typename?: 'Product', name?: string | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
+export type ProductsCollectionQuery = { __typename?: 'Query', products?: { __typename?: 'ProductEntityResponseCollection', data: Array<{ __typename?: 'ProductEntity', id?: string | null, attributes?: { __typename?: 'Product', name?: string | null, slug?: string | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
+
+export type UserQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type UserQuery = { __typename?: 'Query', user?: { __typename?: 'UsersPermissionsMe', id: string, username: string, email?: string | null, confirmed?: boolean | null, blocked?: boolean | null } | null };
 
 export const FilePartsFragmentDoc = gql`
     fragment FileParts on UploadFileEntityResponse {
@@ -2140,9 +2143,92 @@ export function useResetPasswordMutation(baseOptions?: Apollo.MutationHookOption
 export type ResetPasswordMutationHookResult = ReturnType<typeof useResetPasswordMutation>;
 export type ResetPasswordMutationResult = Apollo.MutationResult<ResetPasswordMutation>;
 export type ResetPasswordMutationOptions = Apollo.BaseMutationOptions<ResetPasswordMutation, ResetPasswordMutationVariables>;
+export const CategoriesDocument = gql`
+    query Categories {
+  categories {
+    data {
+      id
+      attributes {
+        name
+        slug
+      }
+    }
+    meta {
+      ...Pagination
+    }
+  }
+}
+    ${PaginationFragmentDoc}`;
+
+/**
+ * __useCategoriesQuery__
+ *
+ * To run a query within a React component, call `useCategoriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCategoriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCategoriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useCategoriesQuery(baseOptions?: Apollo.QueryHookOptions<CategoriesQuery, CategoriesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CategoriesQuery, CategoriesQueryVariables>(CategoriesDocument, options);
+      }
+export function useCategoriesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CategoriesQuery, CategoriesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CategoriesQuery, CategoriesQueryVariables>(CategoriesDocument, options);
+        }
+export type CategoriesQueryHookResult = ReturnType<typeof useCategoriesQuery>;
+export type CategoriesLazyQueryHookResult = ReturnType<typeof useCategoriesLazyQuery>;
+export type CategoriesQueryResult = Apollo.QueryResult<CategoriesQuery, CategoriesQueryVariables>;
+export const CategoryByIdDocument = gql`
+    query CategoryById($id: ID!) {
+  category(id: $id) {
+    data {
+      id
+      attributes {
+        name
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useCategoryByIdQuery__
+ *
+ * To run a query within a React component, call `useCategoryByIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCategoryByIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCategoryByIdQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useCategoryByIdQuery(baseOptions: Apollo.QueryHookOptions<CategoryByIdQuery, CategoryByIdQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CategoryByIdQuery, CategoryByIdQueryVariables>(CategoryByIdDocument, options);
+      }
+export function useCategoryByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CategoryByIdQuery, CategoryByIdQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CategoryByIdQuery, CategoryByIdQueryVariables>(CategoryByIdDocument, options);
+        }
+export type CategoryByIdQueryHookResult = ReturnType<typeof useCategoryByIdQuery>;
+export type CategoryByIdLazyQueryHookResult = ReturnType<typeof useCategoryByIdLazyQuery>;
+export type CategoryByIdQueryResult = Apollo.QueryResult<CategoryByIdQuery, CategoryByIdQueryVariables>;
 export const CollectionsByIdDocument = gql`
     query CollectionsById($id: ID!) {
-  collection {
+  collection(id: $id) {
     data {
       id
       attributes {
@@ -2181,12 +2267,13 @@ export type CollectionsByIdQueryHookResult = ReturnType<typeof useCollectionsByI
 export type CollectionsByIdLazyQueryHookResult = ReturnType<typeof useCollectionsByIdLazyQuery>;
 export type CollectionsByIdQueryResult = Apollo.QueryResult<CollectionsByIdQuery, CollectionsByIdQueryVariables>;
 export const CollectionsDocument = gql`
-    query Collections($filters: CollectionFiltersInput, $pagination: PaginationArg, $sort: [String], $publicationState: PublicationState) {
+    query Collections {
   collections {
     data {
       id
       attributes {
         name
+        slug
       }
     }
     meta {
@@ -2208,10 +2295,6 @@ export const CollectionsDocument = gql`
  * @example
  * const { data, loading, error } = useCollectionsQuery({
  *   variables: {
- *      filters: // value for 'filters'
- *      pagination: // value for 'pagination'
- *      sort: // value for 'sort'
- *      publicationState: // value for 'publicationState'
  *   },
  * });
  */
@@ -2228,7 +2311,7 @@ export type CollectionsLazyQueryHookResult = ReturnType<typeof useCollectionsLaz
 export type CollectionsQueryResult = Apollo.QueryResult<CollectionsQuery, CollectionsQueryVariables>;
 export const GlobalDocument = gql`
     query Global($locale: I18NLocaleCode) {
-  global {
+  global(locale: $locale) {
     data {
       id
       attributes {
@@ -2405,7 +2488,7 @@ export type LeadFormSubmissionByIdQueryHookResult = ReturnType<typeof useLeadFor
 export type LeadFormSubmissionByIdLazyQueryHookResult = ReturnType<typeof useLeadFormSubmissionByIdLazyQuery>;
 export type LeadFormSubmissionByIdQueryResult = Apollo.QueryResult<LeadFormSubmissionByIdQuery, LeadFormSubmissionByIdQueryVariables>;
 export const LeadFormSubmissionsDocument = gql`
-    query LeadFormSubmissions($filters: LeadFormSubmissionFiltersInput, $pagination: PaginationArg = {}, $sort: [String] = []) {
+    query LeadFormSubmissions {
   leadFormSubmission {
     data {
       id
@@ -2431,9 +2514,6 @@ export const LeadFormSubmissionsDocument = gql`
  * @example
  * const { data, loading, error } = useLeadFormSubmissionsQuery({
  *   variables: {
- *      filters: // value for 'filters'
- *      pagination: // value for 'pagination'
- *      sort: // value for 'sort'
  *   },
  * });
  */
@@ -2448,8 +2528,8 @@ export function useLeadFormSubmissionsLazyQuery(baseOptions?: Apollo.LazyQueryHo
 export type LeadFormSubmissionsQueryHookResult = ReturnType<typeof useLeadFormSubmissionsQuery>;
 export type LeadFormSubmissionsLazyQueryHookResult = ReturnType<typeof useLeadFormSubmissionsLazyQuery>;
 export type LeadFormSubmissionsQueryResult = Apollo.QueryResult<LeadFormSubmissionsQuery, LeadFormSubmissionsQueryVariables>;
-export const GetPagesDocument = gql`
-    query GetPages($slug: String!, $sort: [String], $publicationState: PublicationState!, $locale: I18NLocaleCode!) {
+export const GetPageDocument = gql`
+    query GetPage($slug: String!, $sort: [String], $publicationState: PublicationState!, $locale: I18NLocaleCode!) {
   pages(
     filters: {slug: {eq: $slug}}
     sort: $sort
@@ -2616,16 +2696,16 @@ export const GetPagesDocument = gql`
     ${FilePartsFragmentDoc}`;
 
 /**
- * __useGetPagesQuery__
+ * __useGetPageQuery__
  *
- * To run a query within a React component, call `useGetPagesQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetPagesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetPageQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetPageQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetPagesQuery({
+ * const { data, loading, error } = useGetPageQuery({
  *   variables: {
  *      slug: // value for 'slug'
  *      sort: // value for 'sort'
@@ -2634,17 +2714,17 @@ export const GetPagesDocument = gql`
  *   },
  * });
  */
-export function useGetPagesQuery(baseOptions: Apollo.QueryHookOptions<GetPagesQuery, GetPagesQueryVariables>) {
+export function useGetPageQuery(baseOptions: Apollo.QueryHookOptions<GetPageQuery, GetPageQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetPagesQuery, GetPagesQueryVariables>(GetPagesDocument, options);
+        return Apollo.useQuery<GetPageQuery, GetPageQueryVariables>(GetPageDocument, options);
       }
-export function useGetPagesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetPagesQuery, GetPagesQueryVariables>) {
+export function useGetPageLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetPageQuery, GetPageQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetPagesQuery, GetPagesQueryVariables>(GetPagesDocument, options);
+          return Apollo.useLazyQuery<GetPageQuery, GetPageQueryVariables>(GetPageDocument, options);
         }
-export type GetPagesQueryHookResult = ReturnType<typeof useGetPagesQuery>;
-export type GetPagesLazyQueryHookResult = ReturnType<typeof useGetPagesLazyQuery>;
-export type GetPagesQueryResult = Apollo.QueryResult<GetPagesQuery, GetPagesQueryVariables>;
+export type GetPageQueryHookResult = ReturnType<typeof useGetPageQuery>;
+export type GetPageLazyQueryHookResult = ReturnType<typeof useGetPageLazyQuery>;
+export type GetPageQueryResult = Apollo.QueryResult<GetPageQuery, GetPageQueryVariables>;
 export const PagePathsDocument = gql`
     query PagePaths {
   pages {
@@ -2688,11 +2768,12 @@ export type PagePathsLazyQueryHookResult = ReturnType<typeof usePagePathsLazyQue
 export type PagePathsQueryResult = Apollo.QueryResult<PagePathsQuery, PagePathsQueryVariables>;
 export const ProductByIdDocument = gql`
     query ProductById($id: ID!) {
-  product {
+  product(id: $id) {
     data {
       id
       attributes {
         name
+        slug
       }
     }
   }
@@ -2727,12 +2808,13 @@ export type ProductByIdQueryHookResult = ReturnType<typeof useProductByIdQuery>;
 export type ProductByIdLazyQueryHookResult = ReturnType<typeof useProductByIdLazyQuery>;
 export type ProductByIdQueryResult = Apollo.QueryResult<ProductByIdQuery, ProductByIdQueryVariables>;
 export const ProductsCollectionDocument = gql`
-    query ProductsCollection($filters: ProductFiltersInput, $pagination: PaginationArg, $sort: [String], $publicationState: PublicationState) {
+    query ProductsCollection {
   products {
     data {
       id
       attributes {
         name
+        slug
       }
     }
     meta {
@@ -2754,10 +2836,6 @@ export const ProductsCollectionDocument = gql`
  * @example
  * const { data, loading, error } = useProductsCollectionQuery({
  *   variables: {
- *      filters: // value for 'filters'
- *      pagination: // value for 'pagination'
- *      sort: // value for 'sort'
- *      publicationState: // value for 'publicationState'
  *   },
  * });
  */
@@ -2772,6 +2850,44 @@ export function useProductsCollectionLazyQuery(baseOptions?: Apollo.LazyQueryHoo
 export type ProductsCollectionQueryHookResult = ReturnType<typeof useProductsCollectionQuery>;
 export type ProductsCollectionLazyQueryHookResult = ReturnType<typeof useProductsCollectionLazyQuery>;
 export type ProductsCollectionQueryResult = Apollo.QueryResult<ProductsCollectionQuery, ProductsCollectionQueryVariables>;
+export const UserDocument = gql`
+    query User {
+  user: me {
+    id
+    username
+    email
+    confirmed
+    blocked
+  }
+}
+    `;
+
+/**
+ * __useUserQuery__
+ *
+ * To run a query within a React component, call `useUserQuery` and pass it any options that fit your needs.
+ * When your component renders, `useUserQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useUserQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useUserQuery(baseOptions?: Apollo.QueryHookOptions<UserQuery, UserQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<UserQuery, UserQueryVariables>(UserDocument, options);
+      }
+export function useUserLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<UserQuery, UserQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<UserQuery, UserQueryVariables>(UserDocument, options);
+        }
+export type UserQueryHookResult = ReturnType<typeof useUserQuery>;
+export type UserLazyQueryHookResult = ReturnType<typeof useUserLazyQuery>;
+export type UserQueryResult = Apollo.QueryResult<UserQuery, UserQueryVariables>;
 export type CategoryKeySpecifier = ('categoryImage' | 'categoryMetadata' | 'createdAt' | 'name' | 'products' | 'publishedAt' | 'slug' | 'updatedAt' | CategoryKeySpecifier)[];
 export type CategoryFieldPolicy = {
 	categoryImage?: FieldPolicy<any> | FieldReadFunction<any>,
